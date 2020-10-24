@@ -1,0 +1,382 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(229, 57%, 11%);
+    font-family: 'Raleway', sans-serif;
+    color: hsl(243, 100%, 93%);
+    background-image: url(images/bg-desktop.png);
+    background-size: 2300px 500px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+.flex-container {
+    width: 62vw;
+    height: 25vh;
+    display: flex;
+}
+
+.group-1,
+.part-2 {
+    background-color: #1E2D69;
+    overflow: hidden;
+
+}
+
+/* GROUP 1 */
+.group-1 {
+    width: 25vw;
+    margin-right: 3rem;
+    border-radius: 10px 100px 10px 10px;
+    padding: 2rem;
+}
+
+.icon {
+    background-color: hsl(229, 57%, 11%);
+    text-align: center;
+    border-radius: 10px;
+    margin: 3.5rem 0.5rem 0 0;
+    color: hsl(243, 100%, 93%);
+}
+
+/* GROUP 2 */
+.group-2 {
+    width: 37vw;
+    display: flex;
+    flex-direction: column;
+    position: static;
+
+}
+
+/* INFO GB */
+.position-text {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+    margin-right: 2rem;
+}
+
+.info-gb {
+    width: 10vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(243, 100%, 93%);
+    background-color: white;
+    border-radius: 10px 10px 0 10px;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+.info-gb h2 {
+    font-size: 2.4em;
+    color: hsl(229, 57%, 11%);
+}
+
+.info-gb span {
+    font-weight: 500;
+}
+
+/* TRIANGULAR BORDER */
+.container-triangle {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+    margin-right: 2rem;
+}
+
+#triangle {
+    height: 0;
+    width: 0;
+    border-top: 30px solid white;
+    border-left: 40px solid transparent;
+    z-index: 1;
+    margin-top: -0.2rem;
+}
+
+/* PART 2*/
+
+.part-2 {
+    height: 22vh;
+    padding: 3rem 2rem 2rem 2rem;
+    border-radius: 10px;
+    font-size: 0.8em;
+    font-weight: 700;
+    margin-top: -3rem;
+}
+
+/* PROGRESS BAR*/
+
+#progress {
+    width: 32vw;
+    height: 1.5vh;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 10px;
+}
+
+#bar-progress {
+    width: 25vw;
+    height: 1.5vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+#bar-progress::after {
+    content: "";
+    display: block;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: white;
+    margin-right: 3px;
+}
+
+/* UNDER TEXT */
+.text-gb {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+
+    .flex-container {
+        width: 80vw;
+        justify-content: center;
+    }
+
+    .group-1 {
+        width: 30vw;
+    }
+
+    .info-gb {
+        width: 20vw;
+        height: 9vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info-gb h2 {
+        font-size: 2.2em;
+    }
+
+    .info-gb span {
+        font-size: 0.6em;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1279px) {
+    .flex-container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .group-1,
+    .group-2 {
+        width: 40vw;
+        height: 30vh;
+        margin: 80px 0 0 0;
+    }
+
+    .container-triangle {
+        display: none;
+    }
+
+    .position-text {
+        display: flex;
+        order: 3;
+        margin: -35px auto;
+
+    }
+
+    .info-gb {
+        border-radius: 10px;
+
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1279px) {
+    body {
+        background-image: url(images/bg-mobile.png);
+        background-size: cover;
+    }
+
+    .flex-container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .group-1,
+    .group-2 {
+        width: 45vw;
+        height: 30vh;
+        margin: 80px 0 0 0;
+    }
+
+    .container-triangle {
+        display: none;
+    }
+
+    .position-text {
+        display: flex;
+        order: 3;
+        margin: -35px auto;
+
+    }
+
+    .info-gb {
+        width: 20vw;
+        height: 8vh;
+        border-radius: 10px;
+
+    }
+
+    .info-gb span {
+        font-size: 0.8em;
+    }
+
+    #progress {
+        width: 38vw;
+    }
+
+    #bar-progress {
+        width: 32vw;
+    }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 599px) {
+    body {
+        background-image: url(images/bg-mobile.png);
+        background-size: cover;
+    }
+
+    .flex-container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .group-1,
+    .group-2 {
+        width: 80vw;
+        height: 30vh;
+        margin: 80px 0 0 0;
+    }
+
+    .container-triangle {
+        display: none;
+    }
+
+    .position-text {
+        display: flex;
+        order: 3;
+        margin: -35px auto;
+
+    }
+
+    .info-gb {
+        width: 40vw;
+        height: 7vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    .info-gb span {
+        font-size: 0.6em;
+    }
+
+    .info-gb h2 {
+        font-size: 2em;
+    }
+
+    #progress {
+        width: 60vw;
+    }
+
+    #bar-progress {
+        width: 45vw;
+    }
+
+}
+
+@media only screen and (max-width: 414px) {
+    body {
+        background-image: url(images/bg-mobile.png);
+        background-size: cover;
+    }
+
+    .flex-container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .group-1,
+    .group-2 {
+        width: 80vw;
+        height: 30vh;
+        margin: 80px 0 0 0;
+    }
+
+    .container-triangle {
+        display: none;
+    }
+
+    .position-text {
+        display: flex;
+        order: 3;
+        margin: -35px auto;
+
+    }
+
+    .info-gb {
+        width: 40vw;
+        height: 7vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    .info-gb span {
+        font-size: 0.6em;
+    }
+
+    .info-gb h2 {
+        font-size: 2em;
+    }
+
+    #progress {
+        width: 60vw;
+    }
+
+    #bar-progress {
+        width: 45vw;
+    }
+
+}
